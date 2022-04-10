@@ -4,24 +4,24 @@
     </div>
 </div>
 <div class="container">
-    <form>
+    <form [formGroup]="formulario" (ngSubmit)="CadastrarUsuario()">
         <div class="row">
             <div class="col-bottom">
                 <label class="label-form" for="fname">NOME:</label>
-                <input class="input-form" type="text" id="fname" name="name" placeholder="Digite seu nome">
+                <input class="input-form" type="text" id="fname" name="name" placeholder="Digite seu nome" formControlName="nome">
             </div>
             <div class="col-bottom">
                 <label class="label-form" for="femail">E-MAIL:</label>
-                <input class="input-form" type="email" id="femail" name="email" placeholder="EX: carlos@uol.com.br">
+                <input class="input-form" type="email" id="femail" name="email" placeholder="EX: carlos@uol.com.br" formControlName="email">
             </div>
             <div class="col-bottom">
                 <label class="label-form" for="fsenha">SENHA:</label>
-                <input class="input-form" type="password" id="fsenha" name="senha" placeholder="Sua senha precisa ter pelo menos 8 caracteres">
+                <input class="input-form" type="password" id="fsenha" name="senha" placeholder="Sua senha precisa ter pelo menos 8 caracteres" formControlName="senha">
             </div>
 
         </div>
         <div class="col-center">
-            <input type="submit" value="SALVAR">
+            <input type="submit" value="SALVAR" (click)="CadastrarUsuario()">
         </div>
     </form>
 </div>

@@ -9,17 +9,15 @@
 </div>
 
 <div class="container">
-    <form>
-        <div class="row">
-            <div class="col-bottom">
-                <label class="label-form" for="fname">Nome</label>
-                <p class="p-form" id="fname" name="name">Thomas Edson</p>
-            </div>
-            <div class="col-bottom">
-                <label class="label-form" for="femail">E-mail</label>
-                <p class="p-form" id="femail" name="email">thomasedson@uol.com.br</p>
-            </div>
-
+    <div class="row">
+        <div class="col-bottom">
+            <label class="label-form" for="fname">Nome</label>
+            <p class="p-form" id="fname" name="name" *ngFor="let usuario of usuarios">{{usuario.nome}}</p>
         </div>
-    </form>
+        <div class="col-bottom">
+            <label class="label-form" for="femail">E-mail</label>
+            <p class="p-form" id="femail" name="email" *ngFor="let usuario of usuarios">{{usuario.email}}</p>
+        </div>
+
+    </div>
 </div>
