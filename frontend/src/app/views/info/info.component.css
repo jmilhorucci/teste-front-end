@@ -1,15 +1,19 @@
-.container {
-    display: flex;
-    padding: 100px;
+.divider-component {
+    padding-top: 50px;
 }
 
-.card {
-    background-color: red;
+.divider {
+    position: relative;
+    left: auto;
     width: 100%;
-    padding: 10px;
 }
 
-.title {
-    font-size: 72px;
-    font-weight: lighter;
+.label-form {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+.p-form {
+    font-size: 22px;
+    font-weight: bold;
 }

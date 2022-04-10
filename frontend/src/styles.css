@@ -9,3 +9,29 @@ body {
     margin: 0;
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
+
+.container {
+    background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 14% 50px 14%;
+    flex-wrap: wrap;
+}
+
+.row {
+    width: 100%;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: lighter;
+}
+
+.col-bottom {
+    padding-bottom: 26px;
+}
+
+.col-center {
+    text-align: center;
+}
