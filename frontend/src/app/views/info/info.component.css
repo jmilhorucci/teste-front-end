@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    padding: 100px;
+}
+
+.card {
+    background-color: red;
+    width: 100%;
+    padding: 10px;
+}
+
+.title {
+    font-size: 72px;
+    font-weight: lighter;
+}
