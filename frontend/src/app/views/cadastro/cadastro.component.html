@@ -4,23 +4,45 @@
     </div>
 </div>
 <div class="container">
-    <form [formGroup]="formulario" (ngSubmit)="CadastrarUsuario()">
+    <form [formGroup]="formulario" (ngSubmit)="CadastrarUsuario()" autocomplete="off">
         <div class="row">
             <div class="col-bottom">
                 <label class="label-form" for="fname">NOME:</label>
-                <input class="input-form" type="text" id="fname" name="name" placeholder="Digite seu nome" formControlName="nome">
+                <input class="input-form" type="text" id="fname" name="name" placeholder="Digite seu nome" formControlName="nome" required>
+                <ng-container *ngIf="formulario.controls['nome'].dirty && formulario.controls['nome'].invalid || formulario.controls['nome'].touched">
+                    <div class="required required-error" *ngIf="formulario.controls['nome'].errors?.['required']" [@fadeInOut]>
+                        <span class="required-message message-error"><mat-icon>error</mat-icon> Nome obrigatório</span>
+                    </div>
+                </ng-container>
             </div>
             <div class="col-bottom">
                 <label class="label-form" for="femail">E-MAIL:</label>
-                <input class="input-form" type="email" id="femail" name="email" placeholder="EX: carlos@uol.com.br" formControlName="email">
+                <input class="input-form" type="email" id="femail" name="email" placeholder="EX: carlos@uol.com.br" formControlName="email" required>
+
+                <ng-container *ngIf="formulario.controls['email'].dirty && formulario.controls['email'].invalid || formulario.controls['email'].touched">
+                    <div class="required required-error" *ngIf="formulario.controls['email'].errors?.['required']" [@fadeInOut]>
+                        <span class="required-message message-error"><mat-icon>error</mat-icon> E-mail obrigatório</span>
+                    </div>
+                    <div class="required required-warning" *ngIf="formulario.controls['email'].errors?.['email']" [@fadeInOut]>
+                        <span class="required-message message-warning"><mat-icon>warning</mat-icon> E-mail inválido</span>
+                    </div>
+                </ng-container>
+
             </div>
             <div class="col-bottom">
                 <label class="label-form" for="fsenha">SENHA:</label>
-                <input class="input-form" type="password" id="fsenha" name="senha" placeholder="Sua senha precisa ter pelo menos 8 caracteres" formControlName="senha">
+                <input class="input-form" type="password" id="fsenha" name="senha" placeholder="Sua senha precisa ter pelo menos 8 caracteres" formControlName="senha" minlength="8" required>
+                <ng-container *ngIf="formulario.controls['senha'].dirty && formulario.controls['senha'].invalid || formulario.controls['senha'].touched">
+                    <div class="required required-error" *ngIf="formulario.controls['senha'].errors?.['required']" [@fadeInOut]>
+                        <span class="required-message message-error"><mat-icon>error</mat-icon> Senha obrigatória</span>
+                    </div>
+                    <div class="required required-warning" *ngIf="formulario.controls['senha'].errors?.['minlength']" [@fadeInOut]>
+                        <span class="required-message message-warning"><mat-icon>warning</mat-icon> Senha não possuí pelo menos 8 caracteres</span>
+                    </div>
+                </ng-container>
             </div>
-
         </div>
-        <div class="col-center">
+        <div class="buttom">
             <input type="submit" value="SALVAR" (click)="CadastrarUsuario()">
         </div>
     </form>

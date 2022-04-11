@@ -10,12 +10,16 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
+mat-icon {
+    padding-right: 5px;
+}
+
 .container {
     background-color: #FFF;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 14% 50px 14%;
+    padding: 53px 14% 39px 14%;
     flex-wrap: wrap;
 }
 
@@ -32,6 +36,39 @@ body {
     padding-bottom: 26px;
 }
 
-.col-center {
+.buttom {
     text-align: center;
+    padding-top: 26px;
+}
+
+.required {
+    border-radius: 0px 0px 4px 4px;
+    padding: 7px 0px 5px 10px;
+    margin-top: -2px;
+}
+
+.required-message {
+    font-weight: 500;
+    display: flex;
+    place-items: center;
+}
+
+.required-error {
+    background-color: #FF8C96;
+}
+
+.message-error {
+    color: #842029;
+}
+
+.required-warning {
+    background-color: #ffe48c;
+}
+
+.message-warning {
+    color: #847220;
+}
+
+.complete {
+    display: none;
 }

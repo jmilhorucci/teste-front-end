@@ -1,9 +1,11 @@
 .content {
     background-color: #FFF;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card {
-    padding-top: 70px;
     width: 100%;
     box-sizing: border-box;
 }

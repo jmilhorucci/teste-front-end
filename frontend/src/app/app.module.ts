@@ -12,6 +12,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatCardModule } from '@angular/material/card';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatIconModule } from '@angular/material/icon';
 import { CadastroComponent } from './views/cadastro/cadastro.component';
 import { ContentComponent } from './components/template/content/content.component';
 import { InfoComponent } from './views/info/info.component';
@@ -31,6 +32,7 @@ import { InfoComponent } from './views/info/info.component';
     CommonModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
     MatCardModule,

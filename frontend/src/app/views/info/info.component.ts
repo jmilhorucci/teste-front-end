@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Usuario } from './../../usuario';
+import { Usuario } from '../../usuario';
 import { CadastroComponent } from '../cadastro/cadastro.component';
 import { FormGroup, FormControl } from '@angular/forms';
 import { Guid } from 'guid-typescript';
